@@ -8,7 +8,7 @@ export default function JobListPage() {
     const username = localStorage.getItem("username");
 
     useEffect(() => {
-        fetch(`${API_BASE_URL}/jobs")
+        fetch(`${API_BASE_URL}/jobs`)
         .then(res => res.json())
         .then(setJobs)
         .catch(err => console.error("Failed to fetch jobs:",err))
