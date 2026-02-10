@@ -19,7 +19,7 @@ export default function ApplyJobPage() {
     // const json = Object.fromEntries(formData);
 
 
-    const res = await fetch(`${API_BASE_URL}/apply', {
+    const res = await fetch(`${API_BASE_URL}/apply`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
