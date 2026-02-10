@@ -3,11 +3,12 @@ import { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom';
 
 export default function JobListPage() {
+    const API_BASE_URL = process.env.REACT_APP_API_URL || "https://sailaya.pythonanywhere.com";
     const [jobs, setJobs] = useState([]);
     const username = localStorage.getItem("username");
 
     useEffect(() => {
-        fetch("http://127.0.0.1:8000/jobs")
+        fetch(`${API_BASE_URL}/jobs")
         .then(res => res.json())
         .then(setJobs)
         .catch(err => console.error("Failed to fetch jobs:",err))
